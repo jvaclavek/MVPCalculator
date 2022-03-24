@@ -21,8 +21,8 @@ namespace MVPCalculator
     {
       _model.CalculateTotal(new List<string>
       {
-        _view.Value1, 
-        _view.Value2, 
+        _view.Value1,
+        _view.Value2,
         _view.Value3
       }.ConvertAll(TryGetNumber));
 
@@ -39,8 +39,7 @@ namespace MVPCalculator
 
     public decimal TryGetNumber(string input)
     {
-      var value = input.Replace('.', ',');
-      return decimal.TryParse(value, out decimal res) ? res : 0;
+      return decimal.TryParse(input, out decimal res) ? res : 0;
     }
   }
 }
