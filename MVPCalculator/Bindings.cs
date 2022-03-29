@@ -2,12 +2,13 @@
 
 namespace MVPCalculator
 {
-  internal class Bindings : NinjectModule
+  public class Bindings : NinjectModule
   {
     public override void Load()
     {
       Bind<ICalcModel>().To<CalcModel>();
       Bind<ICalcView>().To<CalcView>();
+      Bind<ICalcPresenter>().To<CalcPresenter>();
     }
   }
 }

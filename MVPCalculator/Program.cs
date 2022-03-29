@@ -19,9 +19,7 @@ namespace MVPCalculator
       var kernel = new StandardKernel();
       kernel.Load(Assembly.GetExecutingAssembly());
 
-      CalcPresenter presenter = new CalcPresenter(
-        kernel.Get<CalcView>(),
-        kernel.Get<CalcModel>());
+      var presenter = kernel.Get<CalcPresenter>();
       Application.Run(new ApplicationContext());
     }
   }
