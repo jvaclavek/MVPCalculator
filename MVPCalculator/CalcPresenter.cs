@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MVPCalculator
 {
-  public class CalcPresenter : ICalcPresenter
+  public class CalcPresenter
   {
     readonly ICalcView _view;
     readonly ICalcModel _model;
